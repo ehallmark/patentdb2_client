@@ -22,11 +22,11 @@ from swagger_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DefaultApi()
-patent_type = 'patent_type_example' # str | 
-number = 'number_example' # str | 
-include_description = true # bool |  (optional) (default to true)
-include_claims = true # bool |  (optional) (default to true)
+api_instance = swagger_client.DefaultApi(swagger_client.ApiClient())
+patent_type = 'grant' # str |
+number = '7654321' # str |
+include_description = True # bool |  (optional) (default to true)
+include_claims = True # bool |  (optional) (default to true)
 
 try:
     # Returns patent information for a given patent grant, application, or publication.
@@ -40,8 +40,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **patent_type** | **str**|  | 
- **number** | **str**|  | 
+ **patent_type** | **str**|  |
+ **number** | **str**|  |
  **include_description** | **bool**|  | [optional] [default to true]
  **include_claims** | **bool**|  | [optional] [default to true]
 
@@ -59,4 +59,3 @@ No authorization required
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

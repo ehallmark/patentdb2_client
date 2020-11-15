@@ -17,13 +17,13 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/ehallmark/patentdb2_client.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/ehallmark/patentdb2_client.git`)
 
 Then import the package:
 ```python
-import swagger_client 
+import swagger_client
 ```
 
 ### Setuptools
@@ -52,11 +52,11 @@ from swagger_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
-patent_type = 'patent_type_example' # str | 
-number = 'number_example' # str | 
-include_description = true # bool |  (optional) (default to true)
-include_claims = true # bool |  (optional) (default to true)
+api_instance = swagger_client.DefaultApi(swagger_client.ApiClient())
+patent_type = 'grant' # str |
+number = '7654321' # str |
+include_description = True # bool |  (optional) (default to true)
+include_claims = True # bool |  (optional) (default to true)
 
 try:
     # Returns patent information for a given patent grant, application, or publication.
@@ -84,6 +84,3 @@ Class | Method | HTTP request | Description
 
 
 ## Author
-
-
-# patentdb2_client
